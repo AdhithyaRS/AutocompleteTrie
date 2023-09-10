@@ -13,7 +13,6 @@ function Autocomplete() {
                 username: "",
                 email: ""
             });
-            // Adjusted the URL to match the backend endpoint:
             const response = await fetch(`http://localhost:8080/autocomplete/suggest?prefix=${value}`);
             const data = await response.json();
             if (data) {
